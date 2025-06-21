@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/kumar/OneDrive/Desktop/mlops-with-etl-pipelines/mlruns/0/models/m-a53bf8e885464577937ddc9fa08e3e20/artifacts
+creation_timestamp: 1750546491208
+experiment_id: '0'
+last_updated_timestamp: 1750546494899
+model_id: m-a53bf8e885464577937ddc9fa08e3e20
+model_type: null
+name: model
+source_run_id: 45a8a295a2524a99a7c7efb08f599388
+status: 2
+status_message: null

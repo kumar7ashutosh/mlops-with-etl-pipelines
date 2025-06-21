@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/kumar/OneDrive/Desktop/mlops-with-etl-pipelines/mlruns/0/45a8a295a2524a99a7c7efb08f599388/artifacts
+end_time: 1750546494920
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 45a8a295a2524a99a7c7efb08f599388
+run_name: legendary-mare-852
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750546491077
+status: 3
+tags: []
+user_id: kumar
