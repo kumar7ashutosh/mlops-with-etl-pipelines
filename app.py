@@ -40,8 +40,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"]
 )
-# from fastapi.templating import Jinja2Templates
-# templates = Jinja2Templates(directory="./templates")
+from fastapi.templating import Jinja2Templates
+templates = Jinja2Templates(directory="./templates")
 
 @app.get("/", tags=["authentication"])
 async def index():
@@ -55,6 +55,29 @@ async def train_route():
         return Response("Training is successful")
     except Exception as e:
         raise NetworkSecurityException(e,sys)
-    
+@app.post("/predict")
+async def predict_route(request:Request, file: UploadFile=File(...)):
+    try:
+        df=pd.read_csv(file.file)
+
+        ## load the final_model objects from s3 if desired
+        preprocessor=load_object("final_model/preprocessing.pkl")
+        final_model=load_object("final_model/model.pkl")
+        network_model = NetworkModel(preprocessor=preprocessor, model=final_model)
+        print(df.iloc[0])
+        y_pred = network_model.predict(df)
+        print(y_pred)
+        df['predicted_column']=y_pred
+        print(df['predicted_column'])
+        #df['predicted_column'].replace(-1, 0)
+        df.to_csv("prediction_output/output.csv")
+        table_html = df.to_html(classes='table table-striped')
+        #print(table_html)
+        return templates.TemplateResponse("table.html", {
+            "request": request,
+            "table": table_html
+        })
+    except Exception as e:
+        raise NetworkSecurityException(e,sys)
 if __name__=="__main__":
     app_run(app, host="0.0.0.0", port=8000)
