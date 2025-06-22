@@ -29,7 +29,7 @@ from sklearn.ensemble import(
 )
 import mlflow
 import dagshub
-# dagshub.init(repo_owner='jayyang93', repo_name='NetworkSecurity', mlflow=True)
+# dagshub.init(repo_owner='kumar7ashutosh', repo_name='mlops-with-etl-pipelines', mlflow=True)
 
 class ModelTrainer:
     def __init__(self, 

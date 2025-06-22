@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/kumar/OneDrive/Desktop/mlops-with-etl-pipelines/mlruns/0/0a785d5a532f438f9a803ae38d35ca4a/artifacts
+end_time: 1750600847484
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0a785d5a532f438f9a803ae38d35ca4a
+run_name: enthused-ram-698
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750600841588
+status: 3
+tags: []
+user_id: kumar

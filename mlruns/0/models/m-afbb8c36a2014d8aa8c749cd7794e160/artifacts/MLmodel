@@ -1,0 +1,22 @@
+artifact_path: file:///C:/Users/kumar/OneDrive/Desktop/mlops-with-etl-pipelines/mlruns/0/models/m-afbb8c36a2014d8aa8c749cd7794e160/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.5
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.0
+mlflow_version: 3.1.0
+model_id: m-afbb8c36a2014d8aa8c749cd7794e160
+model_size_bytes: 6718495
+model_uuid: m-afbb8c36a2014d8aa8c749cd7794e160
+prompts: null
+run_id: 0a785d5a532f438f9a803ae38d35ca4a
+utc_time_created: '2025-06-22 14:00:41.828099'
